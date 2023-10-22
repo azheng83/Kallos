@@ -1,0 +1,11 @@
+<h2>Sephora Products</h2>
+
+<p>
+    <ul>
+        {% for product in response.products %}
+            <li>
+                {{ product.displayName }}
+            </li>
+        {% endfor %}
+    </ul>
+</p>
