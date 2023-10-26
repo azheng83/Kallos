@@ -1,18 +1,45 @@
 from django.shortcuts import render
-import requests
+from . import apis
 
-url = "https://sephora.p.rapidapi.com/us/products/v2/list"
 
-querystring = {"categoryId":"cat1080037","pageSize":"60","currentPage":"1"}
+def Perfume(request):
+    response = apis.fetch_perfume_data()
+    return render(request, 'products/fragrances.html', {'response': response})
 
-headers = {
-	"X-RapidAPI-Key": "0a2db9998emshf122785976886e8p10b055jsnb3c36e679120",
-	"X-RapidAPI-Host": "sephora.p.rapidapi.com"
-}
 
-def Products(request):
-    response = requests.get(url, headers=headers, params=querystring).json()
+def PerfumeOils(request):
+    response = apis.fetch_perfume_oil_data()
+    return render(request, "products/fragrances.html", {'response': response})
 
-    return render(request, 'products/product_list.html', {'response': response})
 
-# Create your views here.
+def BodyMistHairMist(request):
+    response = apis.fetch_body_mist_hair_mist_data()
+    return render(request, "products/fragrances.html", {'response': response})
+
+
+def Cologne(request):
+    response = apis.fetch_cologne_data()
+    return render(request, 'products/fragrances.html', {'response': response})
+
+def Bestsellers(request):
+    response = apis.fetch_fragrance_bestsellers_data()
+    return render(request, 'products/fragrances.html', {'response': response})
+
+def NicheFragrance(request):
+    response1, response2, response3, response4 = apis.fetch_niche_fragrances_data()
+    return render(request, 'products/niche_fragrances.html', {'response1': response1, 
+                                                              'response2': response2, 
+                                                              'response3': response3,
+                                                              'response4': response4,})
+
+def CleanFragrance(request):
+    response = apis.fetch_clean_fragrances_data()
+    return render(request, 'products/fragrances.html', {'response': response})
+
+def AffordableFragrance(request):
+    response = apis.fetch_affordable_fragrances_data()
+    return render(request, 'products/fragrances.html', {'response': response})
+
+#def fragrance_notes_guide():
+
+#def find_signature_scent():

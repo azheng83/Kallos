@@ -1,0 +1,48 @@
+<h2>'REPLICA' by Maison Margiela</h2>
+
+<p>
+    <ul>
+        {% for product in response1.products %}
+            <li>
+                {{ product.displayName }}
+            </li>
+        {% endfor %}
+    </ul>
+</p>
+
+<h2>Nest New York</h2>
+
+<p>
+    <ul>
+        {% for product in response2.products %}
+            <li>
+                {{ product.displayName }}
+            </li>
+        {% endfor %}
+    </ul>
+</p>
+
+
+<h2>Jo Malone London</h2>
+
+<p>
+    <ul>
+        {% for product in response3.products %}
+            <li>
+                {{ product.displayName }}
+            </li>
+        {% endfor %}
+    </ul>
+</p>
+
+<h2>Killian</h2>
+
+<p>
+    <ul>
+        {% for product in response4.products %}
+            <li>
+                {{ product.displayName }}
+            </li>
+        {% endfor %}
+    </ul>
+</p>
