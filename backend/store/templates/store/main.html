@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+    maximum-scale=1, minimum-scale=1" />
+
+</head>
+<body>
+    <h1>
+        <div class="form-inline-group">
+            <a class="navbar-brand" href="{% url 'dashboard' %}">
+                <img id="sephora-logo" src="{% static 'images/sephora_logo.png' %}">
+            </a>
+
+            <input id="search-input" type="search" placeholder="Search">
+
+            <div class="form-inline-right-group">
+                <div class="form-inline-sign-in-group">
+                    <a class="btn-btn-warning" href="{% url 'login' %}">
+                        <span><img id="sign-in-logo" src="{% static 'images/sign_in_logo.png' %}">
+                        Sign In<br>for FREE shipping</span>
+                    </a>
+                </div>
+
+                <a class="btn-btn-cart" href="{% url 'basket' %}">
+                    <img id="cart-icon" src="{% static 'images/basket.png' %}">
+                </a>
+            </div>
+        </div>
+    </h1>
+    <hr>
+
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+    <nav class="navbar-sephora-expand">
+        
+
+        <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav-ul">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{}">Makeup</a>
+                    <a class="nav-link" href="{% url 'perfume' %}">Fragrance</a>
+                    <a class="nav-link" href="{}">Skincare</a>
+                    <a class="nav-link" href="{}">Hair</a>
+                    <a class="nav-link" href="{}">Bath & Body</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

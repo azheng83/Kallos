@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cart.css' %}"
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+    maximum-scale=1, minimum-scale=1" />
+
+</head>
+<body>
+    <h1>
+        <a class="navbar-brand" href="{% url 'store' %}">Kallos</a>
+
+    </h1>
+    <hr>
+
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+    <nav class="navbar-sephora-expand">
+        
+    </nav>
+
+
+    
+</body>
+</html>
