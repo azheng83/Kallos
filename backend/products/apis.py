@@ -6,27 +6,121 @@ base_header = {
         "X-RapidAPI-Host": "sephora.p.rapidapi.com"
     }
 
-def fetch_perfume_data():
-    querystring = {"q":"Womens perfume","pageSize":"60","currentPage":"1"}
+def fetch_makeup_data():
+    querystring = {"q":"makeup","pageSize":"30","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_foundation_data():
+    querystring = {"q":"foundation","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_bb_cc_cream_data():
+    querystring = {"q":"BB & CC Cream","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_concealer_data():
+    querystring = {"q":"Concealer","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_primer_data():
+    querystring = {"q":"Face Primer","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_setting_spray_setting_powder_data():
+    querystring = {"q":"Setting Spray & Powder","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
     return requests.get(base_url, headers=base_header, params=querystring).json()
 
 
+
+def fetch_eyeshadow_data():
+    querystring = {"q":"eyeshadow","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_mascara_data():
+    querystring = {"q":"Mascara","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_eyeliner_data():
+    querystring = {"q":"Eyeliner","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_eyebrow_data():
+    querystring = {"q":"eyebrow","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_false_eyelashes_data():
+    querystring = {"q":"false eyelashes","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_lash_serums_brow_serums_data():
+    querystring = {"q":"Eyelash & Eyebrow Serums","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+
+
+
+def fetch_lip_gloss_data():
+    querystring = {"q":"lip gloss","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_lipstick_data():
+    querystring = {"q":"lipstick","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_lip_plumper_data():
+    querystring = {"q":"lip plumper","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_lip_balm_lip_treatments_data():
+    querystring = {"q":"lip balms & treatments","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_lip_liner_data():
+    querystring = {"q":"lip liner","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+
+
+
+def fetch_blush_data():
+    querystring = {"q":"blush","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_highlighter_data():
+    querystring = {"q":"highlighter","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_contour_data():
+    querystring = {"q":"contour","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+
+
+def fetch_fragrance_data():
+    querystring = {"q":"perfume fragrance","pageSize":"30","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_perfume_data():
+    querystring = {"q":"Womens perfume","pageSize":"20","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+    
+
 def fetch_perfume_oil_data():
-    querystring = {"q":"perfume oil","pageSize":"30","currentPage":"1"}
+    querystring = {"q":"perfume oil","pageSize":"20","currentPage":"1"}
     return requests.get(base_url, headers=base_header, params=querystring).json()
 
 
 def fetch_body_mist_hair_mist_data():
-    querystring = {"q":"body mist","pageSize":"29","currentPage":"1"}
+    querystring = {"q":"body mist","pageSize":"20","currentPage":"1"}
     return requests.get(base_url, headers=base_header, params=querystring).json()
 
 
 def fetch_cologne_data():
-    querystring = {"q":"men's cologne","pageSize":"60","currentPage":"1"}
+    querystring = {"q":"men's cologne","pageSize":"20","currentPage":"1"}
     return requests.get(base_url, headers=base_header, params=querystring).json()
 
 def fetch_fragrance_bestsellers_data():
-    querystring = {"q":"most popular fragrances","pageSize":"60","currentPage":"1"}
+    querystring = {"q":"most popular fragrances","pageSize":"20","currentPage":"1"}
     return requests.get(base_url, headers=base_header, params=querystring).json()
 
 
@@ -46,17 +140,13 @@ def fetch_niche_fragrances_data():
 
 
 def fetch_clean_fragrances_data():
-    querystring = {"q":"perfume clean fragrance","pageSize":"60","currentPage":"1"}
+    querystring = {"q":"perfume clean fragrance","pageSize":"20","currentPage":"1"}
     return requests.get(base_url, headers=base_header, params=querystring).json()
 
 def fetch_affordable_fragrances_data():
-    querystring = {"q":"affordable perfume","pageSize":"60","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
+    querystring = {"q":"affordable perfume","pageSize":"20","currentPage":"1","pl":"200","sortBy":"P_BEST_SELLING:1"}
     return requests.get(base_url, headers=base_header, params=querystring).json()
 
-
-#def fragrance_notes_guide():
-
-#def find_signature_scent():
 
 
 

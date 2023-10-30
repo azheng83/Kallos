@@ -1,0 +1,9 @@
+:root {
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-serif: Georgia, Times, serif;
+}
+
+body {
+    font-family: var(--font-family-base);
+    margin: 0;
+}

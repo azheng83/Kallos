@@ -1,0 +1,20 @@
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+    maximum-scale=1, minimum-scale=1" />
+</head>
+
+<body>
+    <p>
+        <ul>
+            {% for product in response.products %}
+                <li>
+                    {{ product.displayName }}
+                </li>
+            {% endfor %}
+        </ul>
+    </p>
+</body>

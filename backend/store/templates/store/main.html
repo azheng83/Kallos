@@ -21,9 +21,9 @@
 
             <div class="form-inline-right-group">
                 <div class="form-inline-sign-in-group">
-                    <a class="btn-btn-warning" href="{% url 'login' %}">
+                        <a class="btn-btn-warning" href="{% url 'login' %}">
                         <span><img id="sign-in-logo" src="{% static 'images/sign_in_logo.png' %}">
-                        Sign In<br>for FREE shipping</span>
+                        <strong>Sign In</strong>for FREE shipping 🚚</span>
                     </a>
                 </div>
 
@@ -46,9 +46,9 @@
 
         <div class="navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav-ul">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{}">Makeup</a>
-                    <a class="nav-link" href="{% url 'perfume' %}">Fragrance</a>
+                <li class="nav-item-active">
+                    <a class="nav-link" href="{% url 'all-makeup' %}">Makeup</a>
+                    <a class="nav-link" href="{% url 'all-fragrance' %}">Fragrance</a>
                     <a class="nav-link" href="{}">Skincare</a>
                     <a class="nav-link" href="{}">Hair</a>
                     <a class="nav-link" href="{}">Bath & Body</a>
