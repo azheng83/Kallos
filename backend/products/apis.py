@@ -149,4 +149,98 @@ def fetch_affordable_fragrances_data():
 
 
 
+def fetch_skincare_data():
+    querystring = {"q":"skincare","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_moisturizer_data():
+    querystring = {"q":"moisturizers","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_everyday_moisturizers_data():
+    querystring = {"q":"everyday face moisturizers","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_night_creams_data():
+    querystring = {"q":"night creams","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_face_oils_data():
+    querystring = {"q":"face oils","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_face_mists_face_essences_data():
+    querystring = {"q":"mists and essences","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+
+
+def fetch_cleansers_data():
+    querystring = {"q":"cleansers","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_face_wash_data():
+    querystring = {"q":"face wash","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_exfoliators_data():
+    querystring = {"q":"face exfoliators","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_makeup_remover_data():
+    querystring = {"q":"makeup removers","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+
+
+def fetch_treatments_data():
+    querystring = {"q":"facial treatments","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_face_serums_data():
+    querystring = {"q":"face serums","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_acne_treatments_data():
+    querystring = {"q":"acne treatments","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_eye_creams_eye_treatments_data():
+    querystring = {"q":"eye creams & treatments","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_lip_balms_lip_treatments_data():
+    querystring = {"q":"lip balms & treatments","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+
+
+def fetch_masks_data():
+    querystring = {"q":"masks","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_face_masks_data():
+    querystring = {"q":"face masks","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_eye_masks_data():
+    querystring = {"q":"eye masks","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+
+def fetch_sunscreen_data():
+    querystring = {"q":"sunscreen","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_face_sunscreen_data():
+    querystring = {"q":"face sunscreen","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_body_sunscreen_data():
+    querystring = {"q":"body sunscreen","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
+
+def fetch_skincare_tools_data():
+    querystring = {"q":"skincare tools","pageSize":"30","currentPage":"1"}
+    return requests.get(base_url, headers=base_header, params=querystring).json()
 

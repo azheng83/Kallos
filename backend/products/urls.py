@@ -36,5 +36,34 @@ urlpatterns = [
     path('shop/clean-fragrance', views.CleanFragrance, name="clean_fragrances"),
     path('beauty/niche-perfume', views.NicheFragrance, name="niche_fragrances"),
     path('beauty/affordable-fragrance', views.AffordableFragrance, name="affordable_fragrances"),
+
+    path('shop/all-skincare', views.Skincare, name="all-skincare"),
+    path('shop/moisturizing-cream-oil-mists', views.Moisturizer, name="all-moisturizer"),
+    path('shop/moisturizing-everyday', views.EverydayMoisturizers, name="everyday-moisturizers"),
+    path('shop/night-cream', views.NightCreams, name="night-creams"),
+    path('shop/face-oils', views.FaceOils, name="face-oils"),
+    path('shop/face-mist-face-essences', views.FaceMistsFaceEssences, name="face-mist-face-essences"),
+
+    path('shop/all-cleansers', views.Cleansers, name="all-cleansers"),
+    path('shop/face-wash', views.FaceWash, name="face-wash"),
+    path('shop/exfoliators', views.Exfoliator, name="exfoliators"),
+    path('shop/makeup-remover', views.MakeupRemover, name="makeup-remover"),
+
+    path('shop/all-treatments', views.Treatments, name="all-treatments"),
+    path('shop/face-serum', views.FaceSerum, name="face-serum"),
+    path('shop/acne-treatments', views.AcneTreatments, name="acne-treatments"),
+    path('shop/eye-creams-eye-treatments', views.EyeCreamsEyeTreatments, name="eye-cream-eye-treatments"),
+    path('shop/lip-balm-lip-treatments', views.LipBalmLipTreatment, name="all-fragrance"),
+
+    path('shop/all-mask', views.Masks, name="masks"),
+    path('shop/face-mask', views.FaceMasks, name="face-masks"),
+    path('shop/eye-mask', views.EyeMasks, name="eye-masks"),
+
+    path('shop/all-sunscreen', views.Sunscreen, name="all-sunscreen"),
+    path('shop/face-sunscreen', views.FaceSunscreen, name="face-sunscreen"),
+    path('shop/body-sunscreen', views.BodySunscreen, name="body-sunscreen"),
+
+    path('shop/skincare-tools', views.SkincareTools, name="skincare-tools"),
+
 ]
 

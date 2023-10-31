@@ -130,3 +130,107 @@ def AffordableFragrance(request):
 #def fragrance_notes_guide():
 
 #def find_signature_scent():
+
+
+
+def Skincare(request):
+    response = apis.fetch_skincare_data()
+    return render(request, "products/index.html", {'response': response})
+
+def Moisturizer(request):
+    response = apis.fetch_moisturizer_data()
+    return render(request, "products/index.html", {'response': response})
+
+def EverydayMoisturizers(request):
+    response = apis.fetch_everyday_moisturizers_data()
+    return render(request, "products/index.html", {'response': response})
+
+def NightCreams(request):
+    response = apis.fetch_night_creams_data()
+    return render(request, "products/index.html", {'response': response})
+
+def FaceOils(request):
+    response = apis.fetch_face_oils_data()
+    return render(request, "products/index.html", {'response': response})
+
+def FaceMistsFaceEssences(request):
+    response = apis.fetch_face_mists_face_essences_data()
+    return render(request, "products/index.html", {'response': response})
+
+
+
+def Cleansers(request):
+    response = apis.fetch_cleansers_data()
+    return render(request, "products/index.html", {'response': response})
+
+def FaceWash(request):
+    response = apis.fetch_face_wash_data()
+    return render(request, "products/index.html", {'response': response})
+
+def Exfoliator(request):
+    response = apis.fetch_exfoliators_data()
+    return render(request, "products/index.html", {'response': response})
+
+def MakeupRemover(request):
+    response = apis.fetch_makeup_remover_data()
+    return render(request, "products/index.html", {'response': response})
+
+
+
+def Treatments(request):
+    response = apis.fetch_treatments_data()
+    return render(request, "products/index.html", {'response': response})
+
+def FaceSerum(request):
+    response = apis.fetch_face_serums_data()
+    return render(request, "products/index.html", {'response': response})
+
+def AcneTreatments(request):
+    response = apis.fetch_acne_treatments_data()
+    return render(request, "products/index.html", {'response': response})
+
+def EyeCreamsEyeTreatments(request):
+    response = apis.fetch_eye_creams_eye_treatments_data()
+    return render(request, "products/index.html", {'response': response})
+
+def LipBalmLipTreatments(request):
+    response = apis.fetch_lip_balm_lip_treatments_data()
+    return render(request, "products/index.html", {'response': response})
+
+
+
+def Masks(request):
+    response = apis.fetch_masks_data()
+    return render(request, "products/index.html", {'response': response})
+
+def FaceMasks(request):
+    response = apis.fetch_face_masks_data()
+    return render(request, "products/index.html", {'response': response})
+
+def EyeMasks(request):
+    response = apis.fetch_eye_masks_data()
+    return render(request, "products/index.html", {'response': response})
+
+
+
+def Sunscreen(request):
+    response = apis.fetch_sunscreen_data()
+    return render(request, "products/index.html", {'response': response})
+
+def FaceSunscreen(request):
+    response = apis.fetch_face_sunscreen_data()
+    return render(request, "products/index.html", {'response': response})
+
+def BodySunscreen(request):
+    response = apis.fetch_body_sunscreen_data()
+    return render(request, "products/index.html", {'response': response})
+
+
+
+def SkincareTools(request):
+    response = apis.fetch_skincare_tools_data()
+    return render(request, "products/index.html", {'response': response})
+
+#def SkincareRoutineBuilderQuiz
+
+#def ShopProductsByConcernQuiz
