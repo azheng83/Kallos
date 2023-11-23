@@ -1,6 +1,9 @@
-
+<!DOCTYPE html>
+{% load static %}
+<html>
 <head>
-    {% load static %}
+    <title>Products</title>
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, 
@@ -9,10 +12,20 @@
 
 <body>
     <p>
-        <ul>
+        <ul class="product-overview-group">
             {% for product in response.products %}
-                <li>
-                    {{ product.displayName }}
+                <li class="product-individual-group">
+                    <img class="product-image" src= "{{ product.heroImage }}" alt="{{ product.displayName }}">
+                    <span id="brand-name">{{ product.brandName }}</span>
+                    <span id="display-name">{{ product.displayName }}</span>
+
+                    {% if product.moreColors %}
+                        <span id="more-colors">{{ product.moreColors }} Colors</span>
+                    {% else %}
+                        <span id="more-colors"> </span>
+                    {% endif %}
+
+                    <span id="ratings">{{ product.displayRating }}</span>
                 </li>
             {% endfor %}
         </ul>

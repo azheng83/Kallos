@@ -14,12 +14,14 @@ SECRET_KEY = "django-insecure-e^abk(9_)^7$i0cxl$+0&6lm_)hmxuj*656zc*aju^)*9bk@v5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
+    'django_filters',
     'products.apps.ProductsConfig',
     'store.apps.StoreConfig',
     "django.contrib.admin",

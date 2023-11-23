@@ -3,6 +3,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('products/', views.ProductListCreateView.as_view(), name="test_rest"),
+
+
     path('shop/all-makeup', views.Makeup, name="all-makeup"),
     path('shop/foundation-makeup', views.Foundation, name="foundation"),
     path('shop/bb-cream-cc-cream', views.BBCreamCCCream, name="bb_cream_cc_cream"),
@@ -53,7 +56,7 @@ urlpatterns = [
     path('shop/face-serum', views.FaceSerum, name="face-serum"),
     path('shop/acne-treatments', views.AcneTreatments, name="acne-treatments"),
     path('shop/eye-creams-eye-treatments', views.EyeCreamsEyeTreatments, name="eye-cream-eye-treatments"),
-    path('shop/lip-balm-lip-treatments', views.LipBalmLipTreatment, name="all-fragrance"),
+    #path('shop/lip-balm-lip-treatments', views.LipBalmLipTreatment, name="all-fragrance"), just put a link to the origial lip balm lip treatments
 
     path('shop/all-mask', views.Masks, name="masks"),
     path('shop/face-mask', views.FaceMasks, name="face-masks"),

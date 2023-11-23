@@ -7,3 +7,38 @@ body {
     font-family: var(--font-family-base);
     margin: 0;
 }
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-individual-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    font-size: 14px;
+    margin: 0 10px 50px;
+}
+
+.product-individual-group img {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+#brand-name {
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+#display-name {
+    display: inline-block;
+    word-wrap: break-word;
+    max-width: 18em;
+}
+

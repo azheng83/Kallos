@@ -15,7 +15,7 @@ body {
 }
 
 a.navbar-brand img {
-    margin-left: 100px;
+    margin-left: 20px;
     width: 130px;
 }
 
@@ -58,7 +58,7 @@ a.btn-btn-cart img {
 
 .form-inline-sign-in-group {
     margin-left: -85px;
-    margin-right: 90px;
+    margin-right: 70px;
 }
 
 #sign-in-logo {

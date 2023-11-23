@@ -209,11 +209,6 @@ def fetch_eye_creams_eye_treatments_data():
     querystring = {"q":"eye creams & treatments","pageSize":"30","currentPage":"1"}
     return requests.get(base_url, headers=base_header, params=querystring).json()
 
-def fetch_lip_balms_lip_treatments_data():
-    querystring = {"q":"lip balms & treatments","pageSize":"30","currentPage":"1"}
-    return requests.get(base_url, headers=base_header, params=querystring).json()
-
-
 
 def fetch_masks_data():
     querystring = {"q":"masks","pageSize":"30","currentPage":"1"}
@@ -243,4 +238,3 @@ def fetch_body_sunscreen_data():
 def fetch_skincare_tools_data():
     querystring = {"q":"skincare tools","pageSize":"30","currentPage":"1"}
     return requests.get(base_url, headers=base_header, params=querystring).json()
-
