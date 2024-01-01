@@ -1,8 +1,6 @@
-from django.http import JsonResponse
 from .models import Product
 from .serializers import ProductSerializer
 
-#from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import filters
@@ -15,25 +13,38 @@ class ProductListCreateView(generics.ListAPIView):
     queryset = Product.objects.all() # if request.method == 'GET' needed?
     serializer_class = ProductSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ['category', 'displayName']
+    search_fields = ['category', 'subcategory', 'displayName']
 
-    def Post(self, request): # add functions for DELETE and PUT
+    def post(self, request): # add functions for DELETE and PUT
         if request.method == 'POST':
             serializer = ProductSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status = status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
         
-#@api_view(['GET', 'PUT', 'DELETE'])
+    def put(self, request): # specify ID
+        if request.method == 'PUT':
+            serializer = ProductSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+    def delete(self, request):
+        if request.method == 'DELETE':
+            serializer = ProductSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 def Makeup(request):
-    response = apis.fetch_makeup_data()
+    response = apis.fetch_makeup_data()[:30]
     return render(request, "products/index.html", {'response': response})
 
 def Foundation(request):
-    response = apis.fetch_foundation_data()
+    response = apis.fetch_foundation_data()[:20]
     return render(request, "products/index.html", {'response': response})
 
 def BBCreamCCCream(request):

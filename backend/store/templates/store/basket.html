@@ -1,33 +1,44 @@
-<!DOCTYPE html>
+{% extends 'store/main.html' %}
 {% load static %}
-<html>
-<head>
-    <title>Dashboard</title>
+{% block content %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/cart.css' %}"
+<h1>My Basket</h1>
+<h3>Get It Shipped</h3>
+<p>Beauty Insiders enjoy FREE standard shipping on all orders.</p>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box-elem">
+            <a class="btn-btn-outline-dark" href="{% url 'dashboard' %}">&#x2190; Continue Shopping</a>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, 
-    maximum-scale=1, minimum-scale=1" />
+            <br>
+            <br>
 
-</head>
-<body>
-    <h1>
-        <a class="navbar-brand" href="{% url 'store' %}">Kallos</a>
-
-    </h1>
-    <hr>
-
-    <div class="container">
-        {% block content %}
-
-        {% endblock content %}
+            <table class="table">
+                <tr>
+                    <th><p>Merchandise Subtotal <strong>$68.00</strong></p></th>
+                    <th><p>Shipping & Handling <strong>FREE</strong></p></th>
+                    <th><h5><strong>Estimated Total</strong><strong> Placeholder Total</strong></h5></th>
+                    <th>
+                        <a style="float:right; margin:5px" class="btn-btn-success" href="{% url 'checkout' %}">Checkout Shipped Items</a>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="box-elem">
+            <div class="cart-row">
+                <div style="flex:2"><img class="row-image" src="{% static 'images/placeholder.png' %}"></div>
+                <div style="flex:2">BrandName 1</div>
+                <div style="flex:1">$20</div>
+                <div style="flex:2">Product 1</div>
+                <div style="flex:2">Color 1</div>
+                <div style="flex:1">
+                    <p class="quantity">2</p>
+                </div>
+                <div style="flex:1">$40</div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <nav class="navbar-sephora-expand">
-        
-    </nav>
-
-
-    
-</body>
-</html>
+{% endblock content %}

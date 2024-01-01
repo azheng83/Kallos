@@ -11,16 +11,46 @@
 
 </head>
 <body>
-    <h1>Kallos</h1>
-    <hr>
+    <h1 id="sephora-logo-top-orient">
+        <div class="img-img-header">
+            <a class="brand-img-route-home" href="{% url 'dashboard' %}">
+                <img id="sephora-logo" src="{% static 'images/sephora_logo.png' %}">
+            </a>
+        </div>
+    </h1>
 
-    <div class="container">
-        {% block content %}
+    <hr class="shadow-line">
 
-        {% endblock content %}
+
+</body>
+</html>
+
+<h1 id="checkout-page-identify">Checkout</h1>
+
+<hr class="checkout-separator-line" style="border-width: 2px !important;">
+
+<h3>Shipping Address</h3>
+<div class="row">
+    <div class="col-lg-6">
+        <input required id="name-first" type="text" name="fname" placeholder="First Name*">
+        <input required id="name-last" type="text" name="lname" placeholder="Last Name*">
+        <br>
+        <input required id="phone-num" type="text" name="phone" placeholder="Phone*">
+        <input required id="email-address" type="text" name="email" placeholder="Email Address*">
+        <br>
+        <input required id="street-address" type="text" name="street" placeholder="Street Address*">
+        <br>
+        <input required id="zipcode" type="text" name="zipcode" placeholder="ZIP/Postal Code*">
+
+        <div class="submit-btn-btn-alert">
+            <input id="form-button" class="btm btn-success btn-block" type="submit" value="Save & Continue">
+        </div>
+
+        <br>
+
+        <div class="box-elem hidden" id="payment-info">
+            <h1>Payment Method</h1>
+        </div>
     </div>
 
 
-    
-</body>
-</html>

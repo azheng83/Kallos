@@ -11,12 +11,12 @@ body {
 .form-inline-group {
     display: flex;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 10vh;
 }
 
 a.navbar-brand img {
-    margin-left: 20px;
-    width: 130px;
+    margin-left: 8vw;
+    width: 8.2vw;
 }
 
 a.navbar-brand {
@@ -24,31 +24,35 @@ a.navbar-brand {
 }
 
 #search-input {
-    border-radius: 18px;
-    border: 1.5px solid black;
-    width: 420px;
-    margin-left: 30px;
-    padding: 8px;
+    border-radius: 18vw;
+    border: .1vw solid black;
+    width: 29vw;
+    margin-left: 2vw;
+    padding: .6vw;
+    margin-top: 1vh;
 }
 
 a.btn-btn-warning {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: .78vw;
     font-weight: 400;
     text-decoration: none;
     color: black;
+    margin-top: 1vh;
 }
 
 a.btn-btn-cart img {
-    width: 60px;
+    width: 4vw;
+    margin-top: 2vh;
+    margin-left: 2.2vw;
 }
 
 .form-inline-right-group {
     display: flex;
     align-items: center;
-    margin-left: 500px;
+    margin-left: 34vw;
 }
 
 .form-inline-sign-in-group strong {
@@ -71,8 +75,8 @@ a.btn-btn-cart img {
 
 .navbar-collapse {
     background-color: black;
-    margin-top: -10px;
-    padding: 2px;
+    margin-top: -2vh;
+    padding: .05vh;
 }
 
 .nav-item-active {
@@ -83,6 +87,10 @@ a.btn-btn-cart img {
 a.nav-link {
     color: white;
     text-decoration: none;
-    margin-right: 50px;
-    font-size: 15px;
+    margin-right: 3vw;
+    font-size: 1vw;
+}
+
+.navbar-sephora-expand {
+    margin-top: 4vh;
 }

@@ -8,5 +8,8 @@ def Dashboard(request):
 
 def Basket(request):
     context = {}
-    return render(request, 'store/main.html', context)
+    return render(request, 'store/basket.html', context)
 
+def Checkout(request):
+    context = {}
+    return render(request, 'store/checkout.html', context)

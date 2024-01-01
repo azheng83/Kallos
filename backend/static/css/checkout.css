@@ -1,0 +1,37 @@
+:root {
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-base);
+}
+
+#sephora-logo {
+    width: 18vw;
+}
+
+#sephora-logo-top-orient {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shadow-line {
+    border: none;
+    height: .1vh;
+    box-shadow: 0 .1vw .3vw rgba(0, 0, 0, 0.5);
+}
+
+#checkout-page-identify {
+    font-family: Georgia, Times, serif;
+    font-weight: lighter;
+    font-size: 3vw;
+}
+
+.checkout-separator-line {
+    background-color: black;
+    height: .000000005vh;
+    border-top: solid black;
+    border-bottom: solid black;
+}

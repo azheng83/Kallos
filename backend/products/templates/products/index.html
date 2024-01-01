@@ -11,9 +11,55 @@
 </head>
 
 <body>
+    <h1>
+        <div class="form-inline-group">
+            <a class="navbar-brand" href="{% url 'dashboard' %}">
+                <img id="sephora-logo" src="{% static 'images/sephora_logo.png' %}">
+            </a>
+
+            <input id="search-input" type="search" placeholder="Search">
+
+            <div class="form-inline-right-group">
+                <div class="form-inline-sign-in-group">
+                        <a class="btn-btn-warning" href="{% url 'login' %}">
+                        <span><img id="sign-in-logo" src="{% static 'images/sign_in_logo.png' %}">
+                        <strong>Sign In</strong>for FREE shipping 🚚</span>
+                    </a>
+                </div>
+
+                <a class="btn-btn-cart" href="{% url 'basket' %}">
+                    <img id="cart-icon" src="{% static 'images/basket.png' %}">
+                </a>
+            </div>
+        </div>
+    </h1>
+    <hr>
+
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+    <nav class="navbar-sephora-expand">
+        
+
+        <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav-ul">
+                <li class="nav-item-active">
+                    <a class="nav-link" href="{% url 'all-makeup' %}">Makeup</a>
+                    <a class="nav-link" href="{% url 'all-fragrance' %}">Fragrance</a>
+                    <a class="nav-link" href="{% url 'all-skincare' %}">Skincare</a>
+                    <a class="nav-link" href="{}">Hair</a>
+                    <a class="nav-link" href="{}">Bath & Body</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
     <p>
         <ul class="product-overview-group">
-            {% for product in response.products %}
+            {% for product in response %}
                 <li class="product-individual-group">
                     <img class="product-image" src= "{{ product.heroImage }}" alt="{{ product.displayName }}">
                     <span id="brand-name">{{ product.brandName }}</span>
@@ -25,7 +71,13 @@
                         <span id="more-colors"> </span>
                     {% endif %}
 
-                    <span id="ratings">{{ product.displayRating }}</span>
+                    <span id="display-rating">{{ product.displayRating }}</span>
+
+                    <span id="display-price">${{ product.displayPrice }}</span>
+
+                    <hr>
+
+                    <button class="btn-btn-add-to-cart">Add to Cart</button>
                 </li>
             {% endfor %}
         </ul>
