@@ -10,9 +10,10 @@
 </form> 
 
 {% if messages %}
-    {% for message in messages %}
-        {% if message.tags == 'success' %}  
-        <script>alert("{{ message }}")</script> 
-        {% endif %}
-    {% endfor %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+  {% endfor %}
 {% endif %}
+
+
+

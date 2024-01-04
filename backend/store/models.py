@@ -9,10 +9,9 @@ class Customer(models.Model):
     first_name = models.CharField(max_length=100, null=True)
     last_name = models.CharField(max_length=100, null=True)
     phone = PhoneNumberField(null=True, unique=True)
-    email = models.CharField(max_length=200, null=True)
 
     def __str__(self):
-        return self.name
+        return self.first_name
     
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, blank=True)

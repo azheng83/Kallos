@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 
-from .forms import RegistrationForm, LoginForm
+from .forms import RegistrationForm, CustomLoginForm
 
 def RegisterUser(request):
     form = RegistrationForm()
@@ -23,23 +23,27 @@ def RegisterUser(request):
     return render(request, 'custom_user/register_user.html', {'form': form})
 
 def LoginUser(request):
-    form = LoginForm()
+    form = CustomLoginForm()
     if request.method == "POST":
-        form = LoginForm(request, data=request.POST)
+        form = CustomLoginForm(request.POST)
         if form.is_valid():
-            email = request.POST.get('email')
-            password = request.POST.get('password')
-            user = authenticate(request, email=email, password=password)
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            user = authenticate(request, email = email, password = password)
             
             if user is not None:
                 login(request, user)
-
-            messages.success(request, 'Successfully logged in!')
-        
-        else:
-            messages.error(request, 'There is an error with your email and/or password.')
+                return redirect('dashboard')
+            else:
+                messages.error(request, f'Invalid login: Email - {email}, Password - {password}')
     
     return render(request, 'custom_user/login_user.html', {'form': form})
+
+def LogoutUser(request):
+    logout(request)
+    return redirect('dashboard')
+
+
 
 
 

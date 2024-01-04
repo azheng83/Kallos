@@ -21,10 +21,16 @@
 
             <div class="form-inline-right-group">
                 <div class="form-inline-sign-in-group">
+                    {% if user.is_authenticated %}
+                        <strong>Hi, {{ request.user.first_name }}</strong>
+                    {% else %}
                         <a class="btn-btn-warning" href="{% url 'login' %}">
                         <span><img id="sign-in-logo" src="{% static 'images/sign_in_logo.png' %}">
                         <strong>Sign In</strong>for FREE shipping 🚚</span>
                         </a>
+                    {% endif %}
+
+                    <a href="{% url 'logout' %}">Logout</a> 
                 </div>
 
                 <a class="btn-btn-cart" href="{% url 'basket' %}">

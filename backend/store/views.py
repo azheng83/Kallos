@@ -1,13 +1,20 @@
 from django.shortcuts import render
-from products.views import Perfume
-from custom_user.views import LoginUser
+from .models import *
 
 def Dashboard(request):
     context = {}
     return render(request, 'store/main.html', context)
 
 def Basket(request):
-    context = {}
+
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        items = order.orderitem_set.all()
+    else:
+        items = []
+
+    context = {'items': items}
     return render(request, 'store/basket.html', context)
 
 def Checkout(request):
