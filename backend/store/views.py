@@ -14,7 +14,7 @@ def Basket(request):
     else:
         items = []
 
-    context = {'items': items}
+    context = {'items': items, 'order': order}
     return render(request, 'store/basket.html', context)
 
 def Checkout(request):

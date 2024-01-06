@@ -44,11 +44,112 @@
         <div class="navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav-ul">
                 <li class="nav-item-active">
-                    <a class="nav-link" href="{% url 'all-makeup' %}">Makeup</a>
-                    <a class="nav-link" href="{% url 'all-fragrance' %}">Fragrance</a>
-                    <a class="nav-link" href="{% url 'all-skincare' %}">Skincare</a>
-                    <a class="nav-link" href="{}">Hair</a>
-                    <a class="nav-link" href="{}">Bath & Body</a>
+                    <div class="dropdown">
+                        <a class="nav-link" id="makeup-link-nav" href="{% url 'all-makeup' %}">Makeup</a>
+                        <div class="dropdown-content" id="dropdown-content-makeup">
+                            <div class="group-1-drop">
+                                <strong><a href="{% url 'all-makeup' %}">All Makeup</a></strong>
+                                <br>
+                                <strong><a href="">Face</a></strong>
+                                <a href="{% url 'foundation' %}">Foundation</a>
+                                <a href="{% url 'bb_cream_cc_cream' %}">BB & CC Cream</a>
+                                <a href="{% url 'concealer' %}">Concealer</a>
+                                <a href="{% url 'primer' %}">Face Primer</a>
+                                <a href="{% url 'setting-spray-setting-powder' %}">Setting Spray & Powder</a>
+                            </div>
+                            <div class="group-2-drop">
+                                <strong><a href="">Eye</a></strong>
+                                <a href="{% url 'mascara' %}">Mascara</a>
+                                <a href="{% url 'eyeliner' %}">Eyeliner</a>
+                                <a href="{% url 'eyebrows' %}">Eyebrow</a>
+                                <a href="{% url 'eyeshadow' %}">Eyeshadow</a>
+                                <a href="{% url 'eye-serums' %}">Eyelash & Eyebrow Serums</a>
+                                <a href="{% url 'false-eyelashes' %}">Eye Sets</a>
+                            </div>
+                            <div class="group-3-drop">
+                                <strong><a href="">Lip</a></strong>
+                                <a href="{% url 'lip-gloss' %}">Lip Gloss</a>
+                                <a href="{% url 'lipstick' %}">Lipstick</a>
+                                <a href="{% url 'lip-plumper' %}">Lip Plumper</a>
+                                <a href="{% url 'balm-and-treatment-lips' %}">Lip Balms & Treatments</a>
+                                <a href="{% url 'lip-liner' %}">Lip Liner</a>
+                            </div>
+                            <div class="group-4-drop">
+                                <strong><a href="">Cheek</a></strong>
+                                <a href="{% url 'blush' %}">Blush</a>
+                                <a href="{% url 'highlighter' %}">Highlighter</a>
+                                <a href="{% url 'contour' %}">Contour</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="nav-link" id="fragrance-link-nav" href="{% url 'all-fragrance' %}">Fragrance</a>
+                        <div class="dropdown-content" id="dropdown-content-fragrance">
+                            <div class="group-1-drop">
+                                <strong><a href="{% url 'all-fragrance' %}">All Fragrance</a></strong>
+                                <a href="{% url 'perfume' %}">Perfume</a>
+                                <a href="{% url 'perfume_oils' %}">Perfume Oils</a>
+                                <a href="{% url 'body_mist_hair_mist' %}">Body Mist & Hair Mist</a>
+                                <a href="{% url 'cologne' %}">Cologne</a>
+                            </div>
+                            <div class="group-2-drop">
+                                <strong><a href="">Shop By</a></strong>
+                                <a href="{% url 'bestsellers' %}">Bestsellers</a>
+                                <a href="{% url 'clean_fragrances' %}">Clean Fragrance</a>
+                                <a href="{% url 'niche_fragrances' %}">Niche Fragrance</a>
+                                <a href="{% url 'affordable_fragrances' %}">Affordable Fragrance</a>
+                            </div>
+                            <div class="group-3-drop">
+                                <strong><a href="">Help Me Choose</a></strong>
+                                <a href="">The Ultimate Fragrance Notes Guide</a>
+                                <a href="">Find Your Signature Scent Quiz</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="nav-link" id="skincare-link-nav" href="{% url 'all-skincare' %}">Skincare</a>
+                        <div class="dropdown-content" id="dropdown-content-skincare">
+                            <div class="group-1-drop">
+                                <strong><a href="{% url 'all-skincare' %}">All Skincare</a></strong>
+                                <br>
+                                <strong><a href="{% url 'all-moisturizer' %}">Moisturizers</a></strong>
+                                <a href="{% url 'everyday-moisturizers' %}">Everyday Moisturizers</a>
+                                <a href="{% url 'night-creams' %}">Night Creams</a>
+                                <a href="{% url 'face-oils' %}">Face Oils</a>
+                                <a href="{% url 'face-mist-face-essences' %}">Mists & Essences</a>
+                                <br>
+                                <strong><a href="{% url 'all-cleansers' %}">Cleansers</a></strong>
+                                <a href="{% url 'face-wash' %}">Face Wash</a>
+                                <a href="{% url 'exfoliators' %}">Exfoliators</a>
+                                <a href="{% url 'makeup-remover' %}">Makeup Removers</a>
+                            </div>
+                            <div class="group-2-drop">
+                                <strong><a href="{% url 'all-treatments' %}">Treatments</a></strong>
+                                <a href="{% url 'face-serum' %}">Face Serums</a>
+                                <a href="{% url 'acne-treatments' %}">Acne Treatments</a>
+                                <a href="{% url 'eye-cream-eye-treatments' %}">Eye Creams & Treatments</a>
+                                <a href="{% url 'balm-and-treatment-lips' %}">Lip Balms & Lip Treatments</a>
+                                <br>
+                                <strong><a href="{% url 'masks' %}">Masks</a></strong>
+                                <a href="{% url 'face-masks' %}">Face Masks</a>
+                                <a href="{% url 'eye-masks' %}">Eye Masks</a>
+                            </div>
+                            <div class="group-3-drop">
+                                <strong><a href="{% url 'all-sunscreen' %}">Sunscreen</a></strong>
+                                <a href="{% url 'face-sunscreen' %}">Face Sunscreen</a>
+                                <a href="{% url 'body-sunscreen' %}">Body Sunscreen</a>
+                                <br>
+                                <strong><a href="{% url 'skincare-tools' %}">Skincare Tools</a></strong>
+                            </div>
+                            <div class="group-4-drop">
+                                <strong><a href="">Need Help Choosing?</a></strong>
+                                <a href="">Skincare Routine Builder Quiz</a>
+                                <a href="">Shop Products By Concern</a>
+                            </div>
+                        </div>
+                    </div>  
+                    <a class="nav-link" id="hair-link-nav" href="{}">Hair</a>
+                    <a class="nav-link" id="bath-n-body-link-nav" href="{}">Bath & Body</a>
                 </li>
             </ul>
         </div>

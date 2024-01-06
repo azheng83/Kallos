@@ -15,7 +15,7 @@
 
             <table class="table">
                 <tr>
-                    <th><p>Merchandise Subtotal <strong>$68.00</strong></p></th>
+                    <th><p>Merchandise Subtotal <strong>${{ order.get_cart_total }}</strong></p></th>
                     <th><p>Shipping & Handling <strong>FREE</strong></p></th>
                     <th><h5><strong>Estimated Total</strong><strong> Placeholder Total</strong></h5></th>
                     <th>
@@ -26,18 +26,16 @@
         </div>
         <br>
         <div class="box-elem">
-
+        <div class="item-cart-total">Get It Shipped ({{ order.get_cart_items }})</div>
             {% for item in items %}
             <div class="cart-row">
-                <div style="flex:2"><img class="row-image" src="{% static 'images/placeholder.png' %}"></div>
-                <div style="flex:2">BrandName 1</div>
-                <div style="flex:1">$20</div>
-                <div style="flex:2">Product 1</div>
-                <div style="flex:2">Color 1</div>
+                <div style="flex:2"><img class="row-image" src="{{ item.product.heroImage }}"></div>
+                <div style="flex:2">{{ item.product.brandName }}</div>
+                <div style="flex:1">{{ item.get_total }}</div>
+                <div style="flex:2">{{ item.product.displayName }}</div>
                 <div style="flex:1">
-                    <p class="quantity">2</p>
+                    <p class="quantity">{{ item.quantity }}</p>
                 </div>
-                <div style="flex:1">$40</div>
             </div>
             {% endfor %}
         </div>

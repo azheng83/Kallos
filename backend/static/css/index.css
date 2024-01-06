@@ -8,93 +8,10 @@ body {
     margin: 0;
 }
 
-.form-inline-group {
-    display: flex;
-    align-items: center;
-    margin-top: 10vh;
-}
-
-a.navbar-brand img {
-    margin-left: 8vw;
-    width: 8.2vw;
-}
-
-a.navbar-brand {
-    text-decoration: none;
-}
-
-#search-input {
-    border-radius: 18vw;
-    border: .1vw solid black;
-    width: 29vw;
-    margin-left: 2vw;
-    padding: .6vw;
-    margin-top: 1vh;
-}
-
-a.btn-btn-warning {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: .78vw;
-    font-weight: 400;
-    text-decoration: none;
-    color: black;
-    margin-top: 1vh;
-}
-
-a.btn-btn-cart img {
-    width: 4vw;
-    margin-top: 2vh;
-    margin-left: 2.2vw;
-}
-
-.form-inline-right-group {
-    display: flex;
-    align-items: center;
-    margin-left: 34vw;
-}
-
-.form-inline-sign-in-group strong {
-    display: flex;
-    font-weight: bold;
-}
-
-.form-inline-sign-in-group {
-    margin-left: -85px;
-    margin-right: 70px;
-}
-
-#sign-in-logo {
-    align-items: center;
-    display: flex;
-    width: 33px;
-    margin-left: -45px;
-    margin-bottom: -32.5px;
-}
-
-.navbar-collapse {
-    background-color: black;
-    margin-top: -2vh;
-    padding: .05vh;
-}
-
-.nav-item-active {
-    display: flex;
-    justify-content: center;
-}
-
-a.nav-link {
-    color: white;
-    text-decoration: none;
-    margin-right: 3vw;
-    font-size: 1vw;
-}
-
 .product-overview-group {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 250px;
+    margin-left: 20vw;
     margin-top: 10vh;
 }
 
@@ -103,7 +20,7 @@ a.nav-link {
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    font-size: 14px;
+    font-size: 1.06vw;
     margin: 0 2vw 10vh;
 }
 
@@ -111,14 +28,14 @@ a.nav-link {
     display: flex;
     width: 250px;
     height: 250px;
-    margin-bottom: 5px;
+    margin-bottom: 2.3vh;
     align-items: center;
 }
 
 #brand-name {
     font-weight: bold;
-    font-size: 13px;
-    margin-top: 20px;
+    font-size: 1vw;
+    margin-top: 2.5vh;
 }
 
 #display-name {
@@ -129,12 +46,12 @@ a.nav-link {
 
 #display-price {
     font-weight: bold;
-    font-size: 16px;
-    margin-top: 5px;
+    font-size: 1.2vw;
+    margin-top: 1vh;
 }
 
 #display-rating {
-    margin-top: 5px;
+    margin-top: .5vw;
 }
 
 .btn-btn-add-to-cart {
