@@ -1,0 +1,80 @@
+:root {
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-serif: Georgia, Times, serif;
+}
+
+body {
+    font-family: var(--font-family-base);
+    margin: 0;
+}
+
+#login-form-group-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 32.5vw;
+    margin-top: 2vh;
+}
+
+#header-login-text {
+    font-size: 1.3vw;
+}
+
+#header-login-blurb {
+    margin-top: -1vh;
+    word-wrap: break-word;
+    max-width: 30em;
+    font-size: 1.2vw;
+}
+
+.login-form-input-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+#id_email {
+    padding: 1.5vh 2vw;
+    margin-left: 32.5vw;
+    margin-right: 32.5vw;
+    margin-bottom: 2vh;
+}
+
+#id_password {
+    padding: 1.5vh 2vw;
+    margin-left: 32.5vw;
+    margin-right: 32.5vw;
+}
+
+#submit-button-login-form {
+    background-color: black;
+    color: white;
+    border-radius: 2vw;
+    padding: 1.5vh 6.5vw;
+    font-size: 1.2vw;
+    margin-left: 32.5vw;
+    margin-top: 4vh;
+}
+
+hr {
+    margin-top: 4vh;
+}
+
+#register-for-account-header {
+    margin-left: 32.5vw;
+    font-size: 1.3vw;
+}
+
+#register-for-account-button {
+    background-color: white;
+    border: .23vw solid black;
+    border-radius: 2vw;
+    padding: 1.5vh 4.4vw;
+    font-size: 1.2vw;
+    margin-left: 32.5vw;
+    margin-top: .3vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

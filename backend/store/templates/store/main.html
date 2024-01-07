@@ -22,7 +22,8 @@
             <div class="form-inline-right-group">
                 <div class="form-inline-sign-in-group">
                     {% if user.is_authenticated %}
-                        <strong>Hi, {{ request.user.first_name }}</strong>
+                        <span><img id="sign-in-logo_after" src="{% static 'images/sign_in_logo_dark.png' %}">
+                        <span class="display-user-name">Hi, {{ request.user.first_name }}</span>
                     {% else %}
                         <a class="btn-btn-warning" href="{% url 'login' %}">
                         <span><img id="sign-in-logo" src="{% static 'images/sign_in_logo.png' %}">

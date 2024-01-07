@@ -1,19 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login_user.css' %}"
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+    maximum-scale=1, minimum-scale=1" />
+
+</head>
+
+<body>
 <form method="POST" action="">
     {% csrf_token %}
-    <div class="form-group">
-        {{ form }}
+  <div class="login-form-container">
+    <div id="login-form-group-text">
+      <h4 id="header-login-text">Sign In</h4>
+      <p id="header-login-blurb">Sign in or create an account to enjoy<strong> FREE standard shipping</strong> on all orders.</p>
     </div>
 
-    <div class="submit-button">
-        <button type=submit>Submit</button>
+    <div class="login-form-input-fields">
+        {{ form }}
     </div>
+    <button id="submit-button-login-form" type=submit >Sign In</button>
+  </div>
 </form> 
+
+<hr>
+
+<h3 id="register-for-account-header">New to Sephora?</h3>
+<button id="register-for-account-button" type="button"><a href="{% url 'register' %}">Create Account</a></button>
 
 {% if messages %}
   {% for message in messages %}
     <div class="alert alert-{{ message.tags }}">{{ message }}</div>
   {% endfor %}
 {% endif %}
+</body>
 
 
 

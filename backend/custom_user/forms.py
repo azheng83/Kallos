@@ -17,8 +17,8 @@ class RegistrationForm(UserCreationForm):
         ]
 
 class CustomLoginForm(forms.Form):
-    email = forms.EmailField()
-    password = forms.CharField(widget=forms.PasswordInput)
+    email = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': 'Email Address'}), label='')
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}), label='')
 
     #class Meta:
         #model = get_user_model()

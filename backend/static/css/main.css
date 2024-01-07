@@ -65,12 +65,17 @@ a.btn-btn-cart img {
     margin-right: 70px;
 }
 
-#sign-in-logo {
+#sign-in-logo,
+#sign-in-logo_after {
     align-items: center;
     display: flex;
     width: 33px;
     margin-left: -45px;
     margin-bottom: -32.5px;
+}
+
+#sign-in-logo_after {
+    margin-bottom: -41px;
 }
 
 .navbar-collapse {
@@ -175,4 +180,9 @@ a.nav-link {
 
 #dropdown-content-skincare::after {
     left: 31.2vw;
+}
+
+.display-user-name {
+    font-size: 1.2vw;
+    font-weight: 400;
 }
